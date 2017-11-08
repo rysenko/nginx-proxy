@@ -1,7 +1,7 @@
 FROM jwilder/nginx-proxy
 ENV MAX_BODY_SIZE=8m
 ENV TIMEOUT=60
-CMD { \
+RUN { \
       echo "server_tokens off;"; \
       echo "client_max_body_size ${MAX_BODY_SIZE};"; \
       echo "proxy_connect_timeout ${TIMEOUT};"; \
